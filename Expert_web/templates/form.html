@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #eee;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Thin", sans-serif;
+}
+
+h1 {
+  margin: 48px;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-align: center;
+}
+
+.radio-container {
+  font-size: 24px;
+  padding: 8px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  padding-right: 32px;
+}
+
+label:nth-last-child(1) {
+  padding-right: 0;
+}
+
+label::before {
+  content: "";
+  border: 2px solid #222;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: -8px 20px;
+  margin-left: 0;
+  border-radius: 50%;
+}
+
+label::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(34, 34, 34, 0);
+  left: 7px;
+  top: 12px;
+  margin: -8px 20px;
+  margin-left: 0;
+  border-radius: 50%;
+
+  transition: all 0.4s;
+}
+
+input[type="radio"]:checked + label::after {
+  background: rgba(34, 34, 34, 1);
+}
+</style>
+<body>
+
+<form action="{{ url_for("gfg")}}" method="post">
+<h1>how do you like the size</h1>
+<div class="radio-container">
+      <input type="radio" id="S" name="wsize" value="S"/>
+      <label for="S">small</label>
+
+      <input type="radio" id="M" name="wsize" value="M"/>
+      <label for="M">medium</label>
+
+      <input type="radio" id="L" name="wsize" value="L"/>
+      <label for="L">large</label>
+    </div>
+
+
+
+
+<h1>how do you like the taste</h1>
+<div class="radio-container">
+      <input type="radio" id="sweet" name="wtaste" value="sweet"/>
+      <label for="sweet">sweet</label>
+
+      <input type="radio" id="fare" name="wtaste" value="fare"/>
+      <label for="fare">fare</label>
+
+    </div>
+
+
+
+<h1>how do you like the price</h1>
+
+<div class="radio-container">
+      <input type="radio" id="low" name="wprice" value="L"/>
+      <label for="low">low</label>
+
+      <input type="radio" id="medium" name="wprice" value="M"/>
+      <label for="medium">medium</label>
+
+      <input type="radio" id="high" name="wprice" value="H"/>
+      <label for="high">high</label>
+
+      <input type="radio" id="Vhigh" name="wprice" value="VH"/>
+      <label for="Vhigh">very high</label>
+    </div>
+
+
+<h1>how do you like the calories</h1>
+
+<div class="radio-container">
+      <input type="radio" id="LC" name="wcalories" value="L"/>
+      <label for="LC">low</label>
+
+      <input type="radio" id="MC" name="wcalories" value="M"/>
+      <label for="MC">medium</label>
+
+      <input type="radio" id="HC" name="wcalories" value="H"/>
+      <label for="HC">high</label>
+    </div>
+
+
+
+<h1>how do you like the texture</h1>
+
+<div class="radio-container">
+      <input type="radio" id="soft" name="wtexture" value="soft"/>
+      <label for="soft">soft</label>
+
+      <input type="radio" id="Tmedium" name="wtexture" value="medium"/>
+      <label for="Tmedium">medium</label>
+
+      <input type="radio" id="hard" name="wtexture" value="hard"/>
+      <label for="hard">hard</label>
+    </div>
+
+
+
+<h1>how do you like the moisture level</h1>
+
+<div class="radio-container">
+      <input type="radio" id="LW" name="wwater" value="L"/>
+      <label for="LW">low</label>
+
+      <input type="radio" id="MW" name="wwater" value="M"/>
+      <label for="MW">medium</label>
+
+      <input type="radio" id="HW" name="wwater" value="H"/>
+      <label for="HW">high</label>
+    </div>
+
+
+
+<button type="submit">submit</button>
+
+</body>
+</html>

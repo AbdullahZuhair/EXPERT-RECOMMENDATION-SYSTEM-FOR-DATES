@@ -1,0 +1,21 @@
+Requirement:
+python 3.8 
+SQL installed in your pc
+database with the name "flaskshop"
+edit the file at G_22_Expert\flask-shop\flaskshop\settings.py with your SQL information at line 9 and line 10 
+
+installition:
+
+get to termanal in your IDE 
+write following commands
+cd flask-shop
+pip3 install -r requirements.txt (if this command dosen't work make sure you have pip librery installed)
+flask creatdb
+flask seed
+flask run 
+
+now you have run the main website but note that our code is made of two website so you have to run the expert system code as well
+
+go to Expert_web, open it as aproject in your IDE, run it at main.py line 401.
+
+now everything should be working fine.
